@@ -1,0 +1,9 @@
+Próximos pasos:
+
+Implementa el protocolo RESP: (https://www.build-redis-from-scratch.dev/en/resp-reader) Debes ajustar el código para que maneje el protocolo RESP para comunicarse con el cliente. Esto implica que deberás escribir un parser para interpretar las respuestas del cliente, que pueden ser cadenas de texto, enteros, errores, etc. Ejemplo:
+
++OK para respuestas positivas.
+-ERR para errores.
+$ seguido de la longitud del valor para valores tipo cadena.
+* para manejar colecciones (listas, sets, etc.).
+Puedes empezar modificando las clases Server y Client para que manejen RESP en lugar de los mensajes de texto planos. Esto también implica la serialización y deserialización de datos en RESP.
